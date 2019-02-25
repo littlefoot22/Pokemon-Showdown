@@ -790,6 +790,8 @@ class Battle extends Dex.ModdedDex {
 		// 	if (!Battle.eventCounter[eventid]) Battle.eventCounter[eventid] = 0;
 		// 	Battle.eventCounter[eventid]++;
 		// }
+		console.log('queue :: ' +  require('util').inspect(this.queue, {showHidden: false, depth: 1}));
+		console.log('eventid :: ' + eventid);
 		if (this.eventDepth >= 8) {
 			// oh fuck
 			this.add('message', 'STACK LIMIT EXCEEDED');
