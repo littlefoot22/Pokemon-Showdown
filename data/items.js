@@ -6009,8 +6009,8 @@ let BattleItems = {
 			},
 		},
 		onUpdate(pokemon) {
-			//run after switchin
-			if ((this.gameType === "doubles") && !(this.queue.length === 0)) {
+			//make sure both intimidates go off befoe item is used
+			if (this.abilityCache.has("intimidate") && (this.gameType === "doubles") && !(this.queue.length === 0)) {
 				return;
 			}
 			let activate = false;
